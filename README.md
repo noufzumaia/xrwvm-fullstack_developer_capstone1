@@ -9,6 +9,22 @@
 4. Launch the application on Port 3030 (Using 'Launch application') - You should see 'Welcome to the Mongoose API'
 5. Open djangoapp/env and replace the backend_url if needed with the url from step 4
 
+## Set up the Django server
+cd /home/project/xrwvm-fullstack_developer_capstone/server
+pip install virtualenv
+virtualenv djangoenv
+source djangoenv/bin/activate
+python3 -m pip install -U -r requirements.txt
+python3 manage.py makemigrations
+python3 manage.py migrate
+
+Create a superuser
+  python3 manage.py createsuperuser
+
+Run the server by executing the following command.
+  python3 manage.py runserver
+
+### Optional:
 ## Run Sentiment Analysis Microservice
 1. In the code engine CLI, change to server/djangoapp/microservices directory
   cd xrwvm-fullstack_developer_capstone/server/djangoapp/microservices
@@ -21,15 +37,3 @@
 5. Connect to the URL that is generated to access the microservices and check if the deployment is successful.
 6. Open djangoapp/.env and replace the code engine deployment url with the deployment URL from above.
   sentiment_analyzer_url=your code engine deployment url
-
-##To be completed##
-8. Initialize the server
-  pip install virtualenv
-  virtualenv djangoenv
-  source djangoenv/bin/activate
-9. Install required packages
-  python3 -m pip install -U -r requirements.txt
-10. Perform model migrations:
-  python3 manage.py makemigrations
-  python3 manage.py migrate
-  python3 manage.py runserver
