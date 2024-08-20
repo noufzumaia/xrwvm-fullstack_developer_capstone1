@@ -24,6 +24,16 @@ Create a superuser
 Run the server by executing the following command.
   python3 manage.py runserver
 
+## Build the client side
+Open a New Terminal and switch to the client directory.
+cd /home/project/xrwvm-fullstack_developer_capstone/server/frontend
+
+Install all required packages.
+npm install
+
+Run the following command to build the client.
+npm run build
+
 ### Optional:
 ## Run Sentiment Analysis Microservice
 1. In the code engine CLI, change to server/djangoapp/microservices directory
