@@ -34,6 +34,18 @@ npm install
 Run the following command to build the client: 
 npm run build
 
+## Set up the Cars Inventory microservice
+Open a terminal and switch to cd xrwvm-fullstack_developer_capstone/server/carsInventory
+
+Install all required packages:
+npm install
+
+Build the nodeapp
+  docker build . -t nodeapp
+Start the server
+  docker-compose up
+Launch the application on Port 3050 (Using 'Launch application') - You should see 'Welcome to the Mongoose API'
+
 ### Optional:
 ## Run Sentiment Analysis Microservice
 1. In the code engine CLI, change to server/djangoapp/microservices directory
